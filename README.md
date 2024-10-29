@@ -1,59 +1,71 @@
 # NODE-SERVER Example 💻
 
-Hello and welcome! This Node.JS project demonstrates a simple architecture building a full API with Node.JS, Express.JS, and MongoDB presents an architectural demo of these features:
+¡Hola y bienvenidos! Este proyecto de Node.JS demuestra una arquitectura simple construyendo una API completa con Node.JS, Express.JS y MongoDB, presentando una demostración arquitectónica de estas características:
 
-- Built with Node.js and Express
-- REST API
+# Archivos de prueba
 
-## Express Router and Routes
+Los archivos de test han sido creados para probar las funcionalidades. Se ha verificado que algunos endpoints de assets están fallando, el siguiente paso es revisar el código de assets para corregir los errores y que pase el test. 
 
-| Route               | HTTP Verb | Route Middleware   | Description                          |
-| --------------------| --------- | ------------------ | ------------------------------------ |
-| /api/task           | GET       |                    | Get list of task                     |
-| /api/task           | POST      |                    | Creates a new task                   |
-| /api/task/:id       | GET       |                    | Get a single task                    |
-| /api/task/:id       | DELETE    |                    | Deletes a task                       |
+- Construido con Node.js y Express
+- API REST
+
+## Enrutador y Rutas de Express
+
+| Ruta                    | HTTP       | Middleware de Ruta | Descripción                          |
+| ------------------------| -----------| ------------------ | ------------------------------------ |
+| /api/tasks              | GET        |                    | Obtener lista de tareas              |
+| /api/tasks              | POST       |                    | Crear una nueva tarea                |
+| /api/tasks/:id          | GET        |                    | Obtener una tarea específica         |
+| /api/tasks/:id          | PATCH      |                    | Actualiza una tarea                  |
+| /api/tasks/:id          | DELETE     |                    | Eliminar una tarea                   |
+| /api/assets             | GET        |                    | Obtener lista de activos             |
+| /api/assets             | POST       |                    | Crear un nuevo activo                |
+| /api/assets/:id         | GET        |                    | Obtener un activo específico         |
+| /api/assets/slug/:slug  | GET        |                    | Obtener lista de activos por slug    |
+| /api/assets/:id         | PATCH      |                    | Actualizar un activo                 |
+| /api/assets/:id         | DELETE     |                    | Eliminar un activo                   |
 
 
-## Usage
-The use of endpoints is very simple, previously you could see a table of endpoints that you can call, if you need to create a user or log in, here we have some examples.
+## Uso
+El uso de los endpoints es muy simple, anteriormente se podía ver una tabla de endpoints que puedes llamar, aquí tenemos algunos ejemplos.
 
-### Basic example **Create TASK** `/api/taks`:
+### Ejemplo básico **Crear TAREA** `/api/task`:
 
-Request Body:
+Cuerpo de la solicitud:
 ```json
 {
-  "title": "Create task",
+  "title": "Crear tarea",
   "description": "Endpoint para crear tareas"
 }
 ```
 
-Response:
+Respuesta:
 ```json
 {
-  "title": "Create task",
+  "title": "Crear tarea",
   "description": "Endpoint para crear tareas",
   "completed": false,
   "id": 4
 }
 ```
 
-## Getting Started
+## Comenzando
 
-### Prerequisites
+### Prerrequisitos
 
 - [Git](https://git-scm.com/)
-- [Node.js and npm](nodejs.org) Node >= 16.14.x, npm >= 8.3.x
+- [Node.js y npm](nodejs.org) Node >= 16.14.x, npm >= 8.3.x
 
-### Developing
+### Desarrollo
 
-1. Run `npm install` to install server dependencies.
+1. Ejecuta `npm install` para instalar las dependencias del servidor.
 
-2. Configure the env
+2. Configura el entorno
 ```shell
 $ cp .env.example .env
 ```
 
-3. Update `.env` with the required info
+3. Actualiza `.env` con la información requerida
 
-4. Run `npm run dev` to start the development server.
+4. Ejecuta `npm run dev` para iniciar el servidor de desarrollo.
+
